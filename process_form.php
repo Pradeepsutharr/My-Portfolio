@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mail($to, "Contact Form Submission", $email_message, $headers);
 
     // Redirect to a thank you page or display a thank you message
-    // header("Location: thank_you.html"); // Change the URL as needed
+    header("Location: index.html"); // Change the URL as needed
     // exit();
 }
 ?>
