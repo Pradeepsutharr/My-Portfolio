@@ -538,16 +538,17 @@
         <form action="process_form.php" method="post">
 
           <div class="input_box row">
-            <input data-aos="fade-right" data-aos-duration="1500" type="text" placeholder="Full Name">
-            <input data-aos="fade-left" data-aos-duration="1500" type="email" placeholder="Email Address">
+            <input name="full_name" data-aos="fade-right" data-aos-duration="1500" type="text" placeholder="Full Name">
+            <input name="email" data-aos="fade-left" data-aos-duration="1500" type="email" placeholder="Email Address">
           </div>
 
           <div class="input_box row">
-            <input data-aos="fade-right" data-aos-duration="1500" type="number" placeholder="Mobile Number">
-            <input data-aos="fade-left" data-aos-duration="1500" type="text" placeholder="Email Subject">
+            <input name="phone" data-aos="fade-right" data-aos-duration="1500" type="number"
+              placeholder="Mobile Number">
+            <input name="subject" data-aos="fade-left" data-aos-duration="1500" type="text" placeholder="Email Subject">
           </div>
 
-          <textarea data-aos="zoom-in" data-aos-duration="1500" name="" id="" rows="15"
+          <textarea data-aos="zoom-in" data-aos-duration="1500" name="message" id="message" rows="15"
             placeholder="Your Message"></textarea>
 
           <div class="submit">
