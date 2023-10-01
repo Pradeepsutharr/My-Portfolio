@@ -137,15 +137,8 @@ header {
   /* border: 1px solid red; */
 }
 
-.logo h2 {
-  color: #00e0ff;
-  font-family: regular;
-  font-size: 45px;
-  letter-spacing: 2px;
-}
-
 .logo {
-  width: 8%;
+  width: 5%;
 }
 
 .menu {
