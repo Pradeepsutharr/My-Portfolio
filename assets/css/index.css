@@ -130,6 +130,7 @@ section {
 header {
   padding: 8px 0;
   background-color: #202020;
+  /* background-color: yellow; */
   width: 100%;
   position: sticky;
   top: 0;
@@ -138,7 +139,8 @@ header {
 }
 
 .logo {
-  width: 5%;
+  width: 10%;
+  display: block;
 }
 
 .menu {
