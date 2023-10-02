@@ -1,45 +1,46 @@
 <?php
+use sendMail\vendor\phpmailer\phpmailer\src\PHPMailer.php;
+use sendMail\vendor\phpmailer\phpmailer\src\SMTP.php;
+use sendMail\vendor\phpmailer\phpmailer\src\Exception.php;
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-//Load Composer's autoloader
-ob_start();
-require 'vendor/autoload.php';
-$mail = new PHPMailer(true);
-// if (isset($_POST['sendmail'])) {
-    $bodyContent = "<h1>Hello!,</h1>";
-    $bodyContent .= '<p>'.$_REQUEST['full_name'].' Trying to connect with you for '.$_REQUEST['designation'].' inquiry</p>';
-    $bodyContent .= '<p>Name : '.$_REQUEST['full_name'].'</p>';
-    $bodyContent .= '<p>Email : '.$_REQUEST['email'].'</p>';
-    $bodyContent .= '<p>Contact Number : '.$_REQUEST['phone'].'</p>';
-    $bodyContent .= '<p>Message : '.$_REQUEST['message'].'</p>';
-    $bodyContent .= '<p>Address : '.$_REQUEST['subject'].'</p>';
-    // $bodyContent .= '<p>Company Name : '.$_REQUEST['company_name'].'</p>';
-    
-    
-    $mail->isSMTP();                            // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';              // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                     // Enable SMTP authentication
-    $mail->Username   = 'psuthar318@gmail.com';                     //SMTP username
-    $mail->Password   = 'lzzr mhcy tgrb dxjn';  // your password 2step varified 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;                
-    $mail->Port = 587;     //587 is used for Outgoing Mail (SMTP) Server.
-    $mail->setFrom('your@gmail.com', 'Name');
-    $mail->addAddress("psuthar318@gmail.com");   // Add a recipient
-    $mail->isHTML(true);  // Set email format to HTML
-    $mail->Body    = $bodyContent;
-    $mail->Subject = 'Email from  name ';
-    if(!$mail->send()) {
-      echo 'Message was not sent.';
-      echo 'Mailer error: ' . $mail->ErrorInfo;
-    } else {
-      echo 'Message has been sent.';
+require 'sendMail\vendor\autoload.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Initialize PHPMailer
+    $mail = new PHPMailer(true);
+
+    try {
+        // Your email configuration settings
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'psuthar318@gmail.com'; // Your Gmail email address
+        $mail->Password = 'Pardip@143kk'; // Your Gmail password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
+
+        // Sender and recipient email addresses
+        $mail->setFrom('your@gmail.com', 'Your Name');
+        $mail->addAddress('psuthar318@gmail.com', 'Pradeep Suthar');
+
+        // Email content
+        $mail->isHTML(true);
+        $mail->Subject = 'Email from ' . $_POST['full_name'];
+        $bodyContent = "<h1>Hello!</h1>";
+        $bodyContent .= '<p>' . $_POST['full_name'] . ' is trying to connect with you for ' . $_POST['subject'] . ' inquiry</p>';
+        $bodyContent .= '<p>Name: ' . $_POST['full_name'] . '</p>';
+        $bodyContent .= '<p>Email: ' . $_POST['email'] . '</p>';
+        $bodyContent .= '<p>Contact Number: ' . $_POST['phone'] . '</p>';
+        $bodyContent .= '<p>Message: ' . $_POST['message'] . '</p>';
+        $bodyContent .= '<p>Address: ' . $_POST['subject'] . '</p>';
+
+        $mail->Body = $bodyContent;
+
+        // Send the email
+        $mail->send();
+        echo 'Message has been sent.';
+    } catch (Exception $e) {
+        echo 'Message was not sent. Mailer error: ' . $mail->ErrorInfo;
     }
-
-
-   
-
+}
 ?>
-
-
