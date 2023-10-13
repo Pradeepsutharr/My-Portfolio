@@ -1,0 +1,341 @@
+@media (min-width: 480px) {
+  .container {
+    width: 93%;
+    margin: 0 auto;
+  }
+
+  .menu {
+    font-size: unset;
+  }
+
+  .buttons .button {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  .cv a {
+    font-size: 30px;
+  }
+
+  .social li a i {
+    font-size: 28px;
+    height: 50px;
+    width: 50px;
+    margin: 0 10px 20px 10px;
+  }
+
+  .footer_txt p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+
+  .logo {
+    width: 4%;
+  }
+
+  .home_sec .row {
+    flex-direction: row;
+  }
+
+  .col_40 {
+    width: 50%;
+  }
+
+  .col_45 {
+    width: 45%;
+  }
+
+  .col_30 {
+    width: 45%;
+  }
+
+  .col_50 {
+    width: 50%;
+  }
+
+  .services .row,
+  .projects .row {
+    justify-content: space-around;
+  }
+
+  .home_txt {
+    text-align: unset;
+  }
+
+  .about_sec .col_30,
+  .about_sec .col_45 {
+    width: 100%;
+  }
+
+  .about_photo {
+    width: 45%;
+    margin: 0 auto;
+  }
+
+  .tools li {
+    width: 12.5%;
+  }
+
+  .buttons .button {
+    margin: 0 8px;
+  }
+
+  .input_box input {
+    width: 49%;
+    margin: 0 7px 8px 0;
+  }
+
+  .cv,
+  .social {
+    text-align: unset;
+  }
+
+  .all_projects a {
+    font-size: 20px;
+  }
+
+  .none {
+    display: block;
+  }
+
+  .footer_icons {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+
+  .font_50,
+  h2.heading {
+    font-size: 45px;
+  }
+
+  .typing_txt {
+    font-size: 34px;
+  }
+
+  .col_40 {
+    width: 40%;
+  }
+
+  .col_45 {
+    width: 45%;
+  }
+
+  .col_30 {
+    width: 30%;
+  }
+
+  .col_50 {
+    width: 50%;
+  }
+
+  .cv a,
+  .read_btn a {
+    color: #00e0ff;
+    background-color: transparent;
+    animation: glow 0s linear 0ms infinite alternate;
+  }
+
+  .all_projects a {
+    color: #00e0ff;
+    background-color: transparent;
+  }
+
+  .services .row,
+  .projects .row {
+    justify-content: space-between;
+  }
+
+  .about_sec .col_45 {
+    width: 45%;
+  }
+
+  .about_sec .col_30 {
+    width: 30%;
+  }
+
+  .home_txt,
+  .read_btn,
+  .about_txt h2,
+  .key_skills h3 {
+    text-align: unset;
+  }
+
+  .services .row {
+    row-gap: 0;
+  }
+
+  form {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .back {
+    position: absolute;
+    background-color: #1e1e1e;
+    top: -293px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .front {
+    border: none;
+    background-color: #1e1e1e;
+  }
+
+  .project_card {
+    border: 2px solid #00e0ff;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  [data-aos="zoom-in"] {
+    transform: scale(0.6);
+  }
+
+  [data-aos="zoom-in-right"] {
+    transform: translate3d(-100px, 0, 0) scale(0.6);
+  }
+
+  [data-aos="zoom-in-left"] {
+    transform: translate3d(100px, 0, 0) scale(0.6);
+  }
+
+  [data-aos="fade-right"] {
+    transform: translate3d(-100px, 0, 0);
+  }
+
+  [data-aos="fade-left"] {
+    transform: translate3d(100px, 0, 0);
+  }
+
+  [data-aos="fade-up"] {
+    transform: translate3d(0, 100px, 0);
+  }
+
+  [data-aos="fade-down"] {
+    transform: translate3d(0, -100px, 0);
+  }
+
+  .navbar li {
+    display: inline-block;
+  }
+
+  nav {
+    background-color: transparent;
+    position: unset;
+    margin: 0;
+    width: unset;
+    height: unset;
+    opacity: 1;
+    overflow: unset;
+  }
+
+  .navbar li a {
+    font-size: 20px;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 0 10px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .read_btn a {
+    margin: 20px 0;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .card:hover {
+    transition: all 0.3s ease-in-out !important;
+    transform: scale(1.1) !important;
+    border: 1.5px solid #00e0ff;
+  }
+
+  .social li a i {
+    margin: 0 20px 20px 0;
+  }
+
+  .about_photo {
+    width: 100%;
+    margin: 0;
+  }
+
+  .buttons .button {
+    margin: 0 20px;
+  }
+
+  i.mr_0 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+
+  .col_40 {
+    width: 40%;
+  }
+
+  .col_45 {
+    width: 45%;
+  }
+
+  .col_30 {
+    width: 30%;
+  }
+
+  .col_50 {
+    width: 50%;
+  }
+
+  .font_50,
+  h2.heading {
+    font-size: 50px;
+  }
+
+  .home_txt .font_50 {
+    font-size: 60px;
+  }
+
+  .typing_txt {
+    font-size: 40px;
+  }
+
+  .back {
+    top: -274px;
+  }
+
+  .home_sec {
+    padding: 30px 0 58px 0;
+  }
+
+  .footer_icons {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1350px;
+  }
+}

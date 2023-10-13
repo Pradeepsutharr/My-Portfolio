@@ -41,7 +41,7 @@ let links = document.querySelectorAll("header ul li a");
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
-    let offset = sec.offsetTop - 170;
+    let offset = sec.offsetTop - 150;
     let height = sec.offsetHeight;
     let id = sec.getAttribute("id");
 
